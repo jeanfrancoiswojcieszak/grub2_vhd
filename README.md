@@ -28,3 +28,27 @@ first version of GRUB, now known as GRUB Legacy. For a summary, please
 see:
 
   info grub Introduction 'Changes from GRUB Legacy'
+  
+  Example usage:
+  
+  after booting into grub:
+  
+  ```insmod vhd```
+  
+  ```vhd vhd0 test.vhd```
+  
+  ```ls (vhd0,msdos1)/ ```
+  
+or
+
+  ```set root=(vhd0,msdos1)/ ```
+  
+  ```linux /vmlinuz ... ```
+  
+  ```initrd /initrd.img ```
+  
+  ```boot```
+  
+  ... but in this case we have to take care of the initramfs to mount the vhd as the root file system to continue boot on the vhd.
+  
+  
